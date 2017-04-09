@@ -7,6 +7,6 @@
     <version>1.0.5-SNAPSHOT</version>
   </parent>
   <groupId>com.oneops</groupId>
-  <artifactId>oneops</artifactId>
-  <packaging>provisio</packaging>  
-</project>
+  <artifactId>distribution</artifactId>
+  <packaging>provisio</packaging>
+<name>OneOps :: Distribution</name></project>

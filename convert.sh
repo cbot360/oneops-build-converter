@@ -1,5 +1,6 @@
 #!/bin/sh
-
+dir=`pwd`
 ./convert-reset.sh
-java -jar oneops-coverter.jar
+cp -r provisio/* $dir
+java -jar oneops-converter.jar
 ./convert-format.sh
