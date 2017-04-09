@@ -1,0 +1,17 @@
+adapter
+amq-plugin
+antenna
+cms-admin
+cmsdal
+controller
+daq
+db-schema
+display
+inductor
+oneops-admin
+oo-commons
+opamp
+search
+sensor
+transistor
+transmitter

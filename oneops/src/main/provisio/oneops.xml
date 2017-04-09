@@ -1,0 +1,73 @@
+<assembly>  
+  <artifactSet to="oneops/dist">
+    <!-- need the ruby app -->
+    
+    <!-- **/amqplugin-fat.jar, **/amq-config.tar.gz -->
+    <artifact id="com.oneops:controller:war:${project.version}"/>
+    <!-- **/daq-*.war, **/daq-*.jar -->
+    <artifact id="com.oneops:daq-api:war:${project.version}"/>
+    <!--
+    <artifact id="com.oneops:daq-collector:${project.version}"/>
+    -->
+    <artifact id="com.oneops:sensor:war:${project.version}"/>
+    <artifact id="com.oneops:opamp:war:${project.version}"/>
+    <artifact id="com.oneops:antenna:war:${project.version}"/>
+    <artifact id="com.oneops:search:${project.version}"/>
+    <!-- app.tar.gz -->
+    <!-- Need to understand shaded JARs -->
+    <!--
+    <artifact id="com.oneops:inductor:${project.version}"/>     -->
+    <!-- inductor.gem -->
+    <!-- oneops-admin -->
+    <artifact id="com.oneops:transmitter:war:${project.version}"/>
+    <artifact id="com.oneops:transistor:war:${project.version}"/>
+    <artifact id="com.oneops.cms:adapter:war:${project.version}"/>
+    <!--
+echo $VERSION > oneops/.version
+echo $BUILD_ID > oneops/.build
+
+tar -czvf oneops-admin-$VERSION.tar.gz oneops/.version oneops/.build oneops/dist/*.gem
+shasum -a 256 oneops-admin-$VERSION.tar.gz > oneops-admin-$VERSION.tar.gz.sha1
+
+tar -czvf oneops-$VERSION.tar.gz oneops
+shasum -a 256 oneops-$VERSION.tar.gz > oneops-$VERSION.tar.gz.sha1
+
+#Packaging Wars 
+wars=( adapter antenna cms-admin controller daq-api-1.0.0 opamp sensor transistor transmitter )
+for war in "${wars[@]}"
+do
+ war_package=oneops-$war-$VERSION.tar.gz
+ tar -czvf $war_package oneops/.version oneops/.build oneops/dist/$war.war
+ shasum -a 256 $war_package > $war_package.sha1
+done
+
+# Packaging display 
+tar -czvf oneops-display-$VERSION.tar.gz oneops/.version oneops/.build oneops/dist/app.tar.gz
+shasum -a 256 oneops-display-$VERSION.tar.gz >oneops-display-$VERSION.sha1
+
+#Packaging search jar 
+tar -czvf oneops-search-$VERSION.tar.gz oneops/.version oneops/.build oneops/dist/search.jar
+shasum -a 256 oneops-search-$VERSION.tar.gz >oneops-search-$VERSION.sha1
+
+#Packaging inductor  jar (keeping the same name name as repo)
+tar -czvf oneops-inductor-$VERSION.tar.gz oneops/.version oneops/.build oneops/dist/inductor-1.1.0.jar
+shasum -a 256 oneops-inductor-$VERSION.tar.gz >oneops-inductor-$VERSION.sha1
+
+
+#Packaging amq plugin 
+tar -czvf oneops-amq-plugin-$VERSION.tar.gz oneops/.version oneops/.build oneops/dist/amqplugin-fat.jar oneops/dist/amq-config.tar.gz
+shasum -a 256 oneops-amq-plugin-$VERSION.tar.gz >oneops-amq-plugin-$VERSION.sha1
+
+#Packaging oneops adming gem 
+#tar -czvf oneops-admin-$VERSION.tar.gz oneops/.version oneops/.build oneops/dist/oneops-admin-1.0.0.gem
+
+#Packaging daq 
+
+tar -czvf oneops-daq-$VERSION.tar.gz oneops/.version oneops/.build oneops/dist/daq-collector-1.0.0.jar oneops/dist/daq-common-1.0.0.jar
+shasum -a 256 oneops-daq-$VERSION.tar.gz >oneops-daq-$VERSION.sha1
+
+test $OO_PACKAGE_PATH && test -d $OO_PACKAGE_PATH
+    -->    
+  </artifactSet>              
+  <archive name="${project.artifactId}-${project.version}.tar.gz"/>  
+</assembly>
