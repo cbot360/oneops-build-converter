@@ -2,5 +2,5 @@
 
 while read project; do
   echo $project
-  git clone https://github.com/oneops/${project}.git
+  git clone git@github.com:oneops/${project}.git
 done < oneops.txt
