@@ -15,6 +15,7 @@
     <artifact id="com.oneops:amqplugin:tar.gz:${project.version}"/>
     <artifact id="com.oneops:display:tar.gz:${project.version}"/>
     <artifact id="com.oneops:batch:tar.gz:${project.version}"/>
+    <artifact id="com.oneops:oneops-admin:tar.gz:${project.version}"/>
   </artifactSet>
   <archive name="${project.artifactId}-${project.version}.tar.gz"/>
 </assembly>

@@ -7,7 +7,7 @@
     <version>1.0.5-SNAPSHOT</version>
   </parent>
   <groupId>com.oneops</groupId>
-  <artifactId>display</artifactId>
+  <artifactId>oneops-admin</artifactId>
   <build>
     <plugins>
       <plugin>
@@ -21,13 +21,13 @@
               <goal>exec</goal>
             </goals>
             <configuration>
-              <executable>bundle</executable>
+              <executable>gem</executable>
               <arguments>
-                <argument>package</argument>
-                <argument>--no-install</argument>
+                <argument>build</argument>
+                <argument>oneops-admin.gemspec</argument>
               </arguments>
             </configuration>
-          </execution>
+          </execution>    
         </executions>
       </plugin>
     </plugins>
