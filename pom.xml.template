@@ -28,7 +28,6 @@
     <module>batch</module>
     <module>oneops</module>
     <module>oneops-admin</module>
-    <module>display</module>
   </modules>
   <build>
     <pluginManagement>
