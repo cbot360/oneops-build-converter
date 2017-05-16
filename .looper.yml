@@ -2,7 +2,6 @@ tools:
   jdk: 8u101
   maven: 3.5.0
 flows:
-  master:
-    - (name mvn clean deploy) mvn clean package
-  pr:
-    - call: default
+  default:
+    - shell: ./convert.sh
+    - shell: mvn clean install
