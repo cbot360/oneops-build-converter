@@ -1,4 +1,4 @@
-<assembly outputDirectory="${basedir}/target/provisio-tarballs">
+<assembly outputDirectory="${basedir}/target/archive-${project.version}">
   <artifactSet to="oneops/dist">
     <artifact id="com.oneops.cms:adapter:tar.gz:${project.version}"
       as="oneops-adapter-${tarballVersion}.tar.gz"/>

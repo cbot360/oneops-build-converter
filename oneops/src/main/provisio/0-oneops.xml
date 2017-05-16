@@ -1,4 +1,4 @@
-<assembly outputDirectory="${basedir}/target/provisio-artifacts">
+<assembly outputDirectory="${basedir}/target/oneops-${project.version}">
   <artifactSet to="oneops/dist">
     <artifact id="com.oneops.cms:adapter:war:${project.version}" as="adapter.war"/>
     <artifact id="com.oneops:antenna:war:${project.version}" as="antenna.war"/>
