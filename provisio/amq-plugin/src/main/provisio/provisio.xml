@@ -3,9 +3,9 @@
     prefix="oneops/dist/"
     name="${basedir}/target/${project.artifactId}-${project.version}.tar.gz"/>
   <fileSet to="/">
-     <directory path="${basedir}/target">
-       <include>*.tar.gz</include>
-       <include>*fat.jar</include>
-     </directory>
+    <file path="${basedir}/target/amqplugin-${project.version}-fat.jar"
+      as="amqplugin-fat.jar"/>
+    <file path="${basedir}/target/amqplugin-${project.version}-amq-config.tar.gz"
+      as="amq-config.tar.gz"/>
    </fileSet>
 </runtime>

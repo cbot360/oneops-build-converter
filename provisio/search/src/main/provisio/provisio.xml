@@ -4,7 +4,7 @@
     name="${basedir}/target/${project.artifactId}-${project.version}.tar.gz"/>
   <fileSet to="/">
      <directory path="${basedir}/target">
-       <include>search.jar</include>
+       <include>search*.jar</include>
      </directory>
    </fileSet>
 </runtime>
