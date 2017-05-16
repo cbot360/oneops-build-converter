@@ -8,5 +8,9 @@
   </parent>
   <groupId>com.oneops</groupId>
   <artifactId>distribution</artifactId>
-  <packaging>provisio</packaging>
-<name>OneOps :: Distribution</name></project>
+  <packaging>pom</packaging>
+  <name>OneOps :: Distribution</name>
+  <properties>
+    <tarballVersion>continuous</tarballVersion>
+  </properties>
+</project>
