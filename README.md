@@ -8,6 +8,9 @@ An attempt to create a single OneOps product build.
 - Unix shell environment (bash)
 - JDK 8
 - Graphviz
+- Ruby
+- Gem
+- Bundler
 
 ## Usage
 
