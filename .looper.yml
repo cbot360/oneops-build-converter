@@ -3,5 +3,6 @@ tools:
   maven: 3.5.0
 flows:
   default:
+    - shell: ./convert-clean.sh
     - shell: ./convert.sh
     - shell: mvn clean install
