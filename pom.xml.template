@@ -179,11 +179,5 @@
       <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
       <url>http://repository.springsource.com/maven/bundles/external</url>
     </repository>
-    <!-- After 5.14 these are in Maven Central -->
-    <repository>
-      <id>org.activiti</id>
-      <name>activiti workflow engine repo</name>
-      <url>https://maven.alfresco.com/nexus/content/repositories/activiti</url>
-    </repository>
   </repositories>
 </project>
