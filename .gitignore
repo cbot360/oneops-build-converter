@@ -18,3 +18,5 @@ transistor
 transmitter
 batch
 target/
+.project
+.settings
