@@ -1,7 +1,5 @@
 <runtime>
-  <archive
-    prefix="oneops/dist/"
-    name="${basedir}/target/${project.artifactId}-${project.version}.tar.gz"/>
+  <archive name="${basedir}/target/${project.artifactId}-${project.version}.tar.gz"/>
   <fileSet to="/">
      <directory path="${basedir}">
        <include>**</include>
@@ -9,6 +7,8 @@
        <exclude>.git/**</exclude>
        <exclude>target/**</exclude>
        <exclude>pom.xml</exclude>
+       <exclude>.bundle/**</exclude>
+       <exclude>~/**</exclude>
      </directory>
    </fileSet>
 </runtime>
