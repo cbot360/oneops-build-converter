@@ -24,9 +24,6 @@
               <executable>bundle</executable>
               <arguments>
                 <argument>package</argument>
-                <!--  install gems in user home .gem folder to avoid sudo need -->
-                <argument>--path</argument>
-                <argument>~/.gem</argument>
               </arguments>
             </configuration>
           </execution>
