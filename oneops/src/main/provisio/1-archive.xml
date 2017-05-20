@@ -30,6 +30,8 @@
       as="oneops-display-${tarballVersion}.tar.gz"/>
     <artifact id="com.oneops:batch:tar.gz:${project.version}"
       as="oneops-batch-${tarballVersion}.tar.gz"/>
+      <artifact id="com.oneops:db-schema:tar.gz:${project.version}"
+        as="oneops-db-schema-${tarballVersion}.tar.gz"/>
     <artifact id="com.oneops:oneops-admin:tar.gz:${project.version}"
       as="oneops-admin-${tarballVersion}.tar.gz"/>
   </artifactSet>

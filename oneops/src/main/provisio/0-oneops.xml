@@ -10,6 +10,7 @@
     <artifact id="com.oneops:transmitter:war:${project.version}" as="transmitter.war"/>
     <artifact id="com.oneops:display:tar.gz:${project.version}" as="app.tar.gz"/>
     <artifact id="com.oneops:daq-api:war:${project.version}" as="daq-api-1.0.0.war"/>
+    <artifact id="com.oneops:db-schema:tar.gz:${project.version}" as="db.tar.gz"/>
     <artifact id="com.oneops:daq-common:${project.version}" as="daq-common-1.0.0.jar">
       <exclusion id="*:*"/>
     </artifact>
