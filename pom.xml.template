@@ -26,7 +26,7 @@
     <module>transistor</module>
     <module>transmitter</module>
     <module>batch</module>
-    <module>oneops</module>
+    <module>oneops-distribution</module>
     <module>oneops-admin</module>
     <module>db-schema</module>
   </modules>
