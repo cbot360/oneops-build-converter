@@ -20,3 +20,4 @@ batch
 target/
 .project
 .settings
+merge.txt
