@@ -8,8 +8,30 @@
   </parent>
   <groupId>com.oneops</groupId>
   <artifactId>oneops-admin</artifactId>
+  <dependencies>
+    <dependency>
+      <groupId>com.oneops</groupId>
+      <artifactId>inductor</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}</outputDirectory>
+              <includeArtifactIds>inductor</includeArtifactIds>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
