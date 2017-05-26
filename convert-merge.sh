@@ -41,3 +41,7 @@ cp -r .mvn $oneops
 cp mvnw $oneops
 cp mvnw.cmd $oneops
 (cd $oneops; git add .; git commit -m 'Add Maven Wrapper.')
+
+cp CONTRIBUTING.md $oneops
+cp LICENSE $oneops
+(cd $oneops; git add .; git commit -m 'Add contributing and license files.')
