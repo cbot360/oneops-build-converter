@@ -8,11 +8,14 @@
   </parent>
   <groupId>com.oneops</groupId>
   <artifactId>oneops-packer</artifactId>
+  <packaging>pom</packaging>
+  <name>OneOps :: Oneops-packer</name>
   <dependencies>
     <dependency>
       <groupId>com.oneops</groupId>
-      <artifactId>oneops-distribution</artifactId>
+      <artifactId>oneops</artifactId>
       <version>${project.version}</version>
+      <type>tar.gz</type>
     </dependency>
   </dependencies>
   <build>
@@ -27,12 +30,11 @@
             </goals>
             <configuration>
               <outputDirectory>${project.build.directory}</outputDirectory>
-              <includeArtifactIds>oneops-packer</includeArtifactIds>
+              <includeArtifactIds>oneops</includeArtifactIds>
             </configuration>
           </execution>
         </executions>
       </plugin>
-      <!--
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
@@ -44,16 +46,14 @@
               <goal>exec</goal>
             </goals>
             <configuration>
-              <executable>gem</executable>
+              <executable>./build.sh</executable>
               <arguments>
-                <argument>build</argument>
-                <argument>oneops-admin.gemspec</argument>
+                <argument>${basedir}/target/oneops-${project.version}.tar.gz</argument>
               </arguments>
             </configuration>
           </execution>
         </executions>
       </plugin>
-      -->
     </plugins>
   </build>
 </project>
