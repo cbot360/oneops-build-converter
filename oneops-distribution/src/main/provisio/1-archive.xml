@@ -1,4 +1,4 @@
-<assembly outputDirectory="${basedir}/target/archive-${project.version}">
+<assembly outputDirectory="${basedir}/target/distribution-${project.version}-archive">
   <artifactSet to="oneops/dist">
     <artifact id="com.oneops.cms:adapter:tar.gz:${project.version}"
       as="oneops-adapter-${tarballVersion}.tar.gz"/>
@@ -36,8 +36,8 @@
       as="oneops-admin-${tarballVersion}.tar.gz"/>
   </artifactSet>
   <fileSet to="oneops/dist">
-    <file path="${basedir}/target/oneops-${project.version}.tar.gz"
+    <file path="${basedir}/target/distribution-${project.version}-oneops.tar.gz"
       as="oneops-${tarballVersion}.tar.gz"/>
   </fileSet>
-  <archive name="archive-${project.version}.tar.gz"/>
+  <archive name="distribution-${project.version}-archive.tar.gz" classifier="archive"/>
 </assembly>

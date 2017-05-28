@@ -1,4 +1,4 @@
-<assembly outputDirectory="${basedir}/target/oneops-${project.version}">
+<assembly outputDirectory="${basedir}/target/distribution-${project.version}-oneops">
   <artifactSet to="oneops/dist">
     <artifact id="com.oneops.cms:adapter:war:${project.version}" as="adapter.war"/>
     <artifact id="com.oneops:antenna:war:${project.version}" as="antenna.war"/>
@@ -35,5 +35,5 @@
       <unpack useRoot="true"/>
     </artifact>
   </artifactSet>
-  <archive name="oneops-${project.version}.tar.gz"/>
+  <archive name="distribution-${project.version}-oneops.tar.gz" classifier="oneops"/>
 </assembly>
